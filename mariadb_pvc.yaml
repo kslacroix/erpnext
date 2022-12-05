@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    volume.beta.kubernetes.io/storage-provisioner: block.csi.vultr.com
+    volume.kubernetes.io/storage-provisioner: block.csi.vultr.com
+  creationTimestamp: "2022-12-05T16:14:52Z"
+  finalizers:
+  - kubernetes.io/pvc-protection
+  labels:
+    app.kubernetes.io/component: primary
+    app.kubernetes.io/instance: erpnext
+    app.kubernetes.io/name: mariadb
+  name: data-erpnext-mariadb-0
+  namespace: erpnext
+  resourceVersion: "957250"
+  uid: 5e7c3f6f-3805-4505-a3d3-ef4e7f4c1b3e
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: vultr-block-storage
+  volumeMode: Filesystem
+status:
+  phase: Pending

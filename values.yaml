@@ -1,0 +1,34 @@
+#dbHost: http://vultr-prod-93abb1e8-1421-44a6-b5b6-55653cbab086-vultr-prod-a1e4.vultrdb.com
+#dbPort: 16751
+#dbRootUser: vultradmin
+#dbRootPassword: AVNS_RHnPmUUqYsGI2pqWZBk
+persistence:
+  worker:
+    enabled: true
+    storageClass: nfs #vultr-block-storage
+
+  logs:
+    enabled: true
+    storageClass: nfs #vultr-block-storage
+
+mariadb:
+  enabled: true
+
+    #nginx:
+    #  environment:
+    #    frappeSiteNameHeader: erp.dev.symbolitech.com
+
+jobs:
+  createSite:
+    enabled: true
+    siteName: erp.dev.symbolitech.com
+
+#nginxImage:
+#  # repository: registry.g    itlab.com/lovia/frappe_docker/lovia-nginx
+#  tag: version-13-beta
+#pythonImage:
+#  # repository: registry.g    itlab.com/lovia/frappe_docker/lovia-worker
+#  tag: version-13-beta
+## frappe/frappe-socketio
+#socketIOImage:
+#  tag: version-13-beta

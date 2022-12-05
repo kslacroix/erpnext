@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+    kubernetes.io/ingress.class: nginx
+  name: erpnext
+  namespace: erpnext
+spec:
+  rules:
+  - host: erp.dev.symbolitech.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: erpnext
+            port:
+              name: http
+        path: /
+        pathType: ImplementationSpecific
+  tls:
+  - hosts:
+    - erp.dev.symbolitech.com
+    secretName: erp.dev.symbolitech.com-tls
