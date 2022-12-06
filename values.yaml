@@ -1,7 +1,7 @@
-#dbHost: http://vultr-prod-93abb1e8-1421-44a6-b5b6-55653cbab086-vultr-prod-a1e4.vultrdb.com
-#dbPort: 16751
-#dbRootUser: vultradmin
-#dbRootPassword: AVNS_RHnPmUUqYsGI2pqWZBk
+dbHost: 144.202.12.31
+dbPort: 3306
+dbRootUser: admin
+dbRootPassword: admin
 persistence:
   worker:
     enabled: true
@@ -12,7 +12,7 @@ persistence:
     storageClass: nfs #vultr-block-storage
 
 mariadb:
-  enabled: true
+  enabled: false
 
     #nginx:
     #  environment:
@@ -21,7 +21,7 @@ mariadb:
 jobs:
   createSite:
     enabled: true
-    siteName: erp.dev.symbolitech.com
+    siteName: lhmerpnext.dev.symbolitech.com
 
 #nginxImage:
 #  # repository: registry.g    itlab.com/lovia/frappe_docker/lovia-nginx

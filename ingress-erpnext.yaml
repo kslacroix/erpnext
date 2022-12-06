@@ -8,7 +8,7 @@ metadata:
   namespace: erpnext
 spec:
   rules:
-  - host: erp.dev.symbolitech.com
+  - host: lhmerpnext.dev.symbolitech.com
     http:
       paths:
       - backend:
@@ -20,5 +20,5 @@ spec:
         pathType: ImplementationSpecific
   tls:
   - hosts:
-    - erp.dev.symbolitech.com
-    secretName: erp.dev.symbolitech.com-tls
+    - lhmerpnext.dev.symbolitech.com
+    secretName: lhmerpnext.dev.symbolitech.com-tls
